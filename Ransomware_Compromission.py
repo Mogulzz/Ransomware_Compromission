@@ -1,6 +1,5 @@
 import pandas as pd
 import datetime
-import numpy as np
 from googlesearch import search
 import re
 import os
