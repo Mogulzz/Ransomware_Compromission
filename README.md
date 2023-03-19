@@ -7,7 +7,7 @@ A python script that retrieves the latest victims of ransomware groups available
 
 ## Requirements
 
-This script requires the installation of 3 libraries for its proper functioning:
+This script requires the installation of 4 libraries for its proper functioning:
 * pandas which was used to convert the raw JSON file in a Dataframe, much easier to manipulate.
 * google which was used for the creation of URLs.
 * beautifulsoup4 which was necessary for the proper functioning of the google library
