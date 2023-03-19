@@ -1,5 +1,5 @@
 # Ransomware_Compromission
-A python script that recovers the latest victims of a JSON-based ransomware gang of the day available on the [Ransomwatch Project](https://github.com/joshhighet/ransomwatch), and export it on CSVs and Excel format with :
+A python script that retrieves the latest victims of ransomware groups available on the [Ransomwatch Project](https://github.com/joshhighet/ransomwatch), and export it on CSV and Excel format with :
 * The victims of the incident
 * Ransomware operators behind the incidents
 * The Date of the claim by the operators 
