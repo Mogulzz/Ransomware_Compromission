@@ -1,2 +1,27 @@
 # Ransomware_Compromission
-A python script that recovers the latest victims of a ransomware gang
+A python script that recovers the latest victims of a JSON-based ransomware gang of the day available on the [Ransomwatch Project](https://github.com/joshhighet/ransomwatch), and export it on CSVs and Excel format with :
+* The victims of the incident
+* Ransomware operators behind the incidents
+* The Date of the claim by the operators 
+* The URLs of the victims
+
+## Requirements
+
+This script requires the installation of 3 libraries for its proper functioning:
+* pandas which was used to convert the raw JSON file in a Dataframe, much easier to manipulate.
+* google which was used for the creation of URLs.
+* beautifulsoup4 which was necessary for the proper functioning of the google library
+* openpyxl which was necessary for the exportation in Excel Format
+
+for installing the libraries you can type the command:
+```
+pip install -r requirements.txt
+```
+
+## To-Do-List
+- [ ] Adding the country of the victims
+
+## Credits
+* Josh Highet for his Ransomwatch Project
+* Mario Vilas for his google library
+
