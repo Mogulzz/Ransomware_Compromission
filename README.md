@@ -19,7 +19,9 @@ pip install -r requirements.txt
 ```
 
 ## To-Do-List
-- [ ] Adding the country of the victims
+- [X] Adding the country of the victims
+- [X] Export the files in an ZIP archive
+- [X] Adding of an option for the user to choose the number of days difference  
 
 ## Credits
 * Josh Highet for his Ransomwatch Project
