@@ -8,10 +8,10 @@ import argparse
 import zipfile
 
 
-def creation_Dataframe_Ransom(url):
+def creation_Dataframe_Ransom(url,delta_Days):
     df = pd.read_json(url)
     now = datetime.datetime.now()
-    yesterday_date= datetime.datetime.now() - datetime.timedelta(days=1)
+    yesterday_date= datetime.datetime.now() - datetime.timedelta(days=int(delta_Days))
     df = df.loc[df["discovered"].between(str(yesterday_date), str(now))]
     df = df.reset_index(drop=True)
     return df
@@ -77,10 +77,20 @@ def misc():
 def main():
     url = "https://raw.githubusercontent.com/joshhighet/ransomwatch/main/posts.json"
     url_List = []
-    Dataframe_Ransom=creation_Dataframe_Ransom(url)
-    url_Creation(Dataframe_Ransom,url_List)
-    output_Creation(Dataframe_Ransom)
-    misc()
+    country_list=[]
+    inputs=parse_args()
+    if inputs.number:
+        Dataframe_Ransom=creation_Dataframe_Ransom(url,inputs.number)
+        url_Creation(Dataframe_Ransom,url_List)
+        country_Creation(Dataframe_Ransom, country_list)
+        output_Creation(Dataframe_Ransom)
+        misc()
+    else:
+        Dataframe_Ransom=creation_Dataframe_Ransom(url,2)
+        url_Creation(Dataframe_Ransom,url_List)
+        country_Creation(Dataframe_Ransom, country_list)
+        output_Creation(Dataframe_Ransom)
+        misc()
 
 if __name__ == "__main__":
     main()
