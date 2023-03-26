@@ -19,7 +19,7 @@ pip install -r requirements.txt
 ```
 
 ## To-Do-List
-- [X] Adding the country of the victims
+- [] Adding the country of the victims (The first vision by looking the TLD works but not efficient enough)
 - [X] Export the files in an ZIP archive
 - [X] Adding of an option for the user to choose the number of days difference  
 
